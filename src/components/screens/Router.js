@@ -7,7 +7,7 @@ import MapScreen from './Map/Map'
 import ProfileScreen from './Profile/Profile'
 import AuthLoadingScreen from './AuthLoading/AuthLoading'
 
-import { BLACK_COLOR, WHITE_COLOR } from '../../styles/stylesConstants'
+import { BLACK_COLOR, WHITE_COLOR, LOGO_DIMENSION } from '../../styles/stylesConstants'
 import Icon from 'react-native-vector-icons/FontAwesome5'
 
 const AuthStack = createBottomTabNavigator({
@@ -15,7 +15,7 @@ const AuthStack = createBottomTabNavigator({
         screen: MapScreen,
         navigationOptions: {
             tabBarIcon: ({ tintColor, activeTintColor }) => (
-                <Icon name='map-marked' size={35} color={tintColor} />
+                <Icon name='map-marked' size={LOGO_DIMENSION} color={tintColor} />
             )
         },
     },
@@ -23,7 +23,7 @@ const AuthStack = createBottomTabNavigator({
         screen: ForumScreen,
         navigationOptions: {
             tabBarIcon: ({ tintColor, activeTintColor }) => (
-                <Icon name='rocketchat' size={35} color={tintColor} />
+                <Icon name='rocketchat' size={LOGO_DIMENSION} color={tintColor} />
             )
         },
     },
@@ -31,7 +31,7 @@ const AuthStack = createBottomTabNavigator({
         screen: ProfileScreen,
         navigationOptions: {
             tabBarIcon: ({ tintColor, activeTintColor }) => (
-                <Icon name='user' size={35} color={tintColor} />
+                <Icon name='user' size={LOGO_DIMENSION} color={tintColor} />
             )
         },
     }
@@ -43,9 +43,6 @@ const AuthStack = createBottomTabNavigator({
         tintColor: WHITE_COLOR,
         style: {
             backgroundColor: BLACK_COLOR
-        },
-        labelStyle: {
-            fontSize: 20
         }
     }
 })
@@ -61,7 +58,7 @@ const ApplicationStack = createSwitchNavigator({
     Unauth: UnauthStack,
     AuthLoading: AuthLoadingScreen
 }, {
-    initialRouteName: 'Auth'
+    initialRouteName: 'Unauth'
 })
 
 export default createAppContainer(ApplicationStack)
