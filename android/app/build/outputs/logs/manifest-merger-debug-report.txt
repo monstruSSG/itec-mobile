@@ -1,0 +1,220 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/bogdi/Desktop/itec/ItecMobile/android/app/src/main/AndroidManifest.xml:1:1-26:12
+INJECTED from /home/bogdi/Desktop/itec/ItecMobile/android/app/src/main/AndroidManifest.xml:1:1-26:12
+INJECTED from /home/bogdi/Desktop/itec/ItecMobile/android/app/src/main/AndroidManifest.xml:1:1-26:12
+INJECTED from /home/bogdi/Desktop/itec/ItecMobile/android/app/src/main/AndroidManifest.xml:1:1-26:12
+MERGED from /home/bogdi/Desktop/itec/ItecMobile/android/app/src/main/AndroidManifest.xml:1:1-26:12
+MERGED from [com.facebook.react:react-native:0.60.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/6d7360e65a00d8bbc706ae709abffe03/AndroidManifest.xml:2:1-13:12
+MERGED from [org.webkit:android-jsc:r245459] /home/bogdi/.gradle/caches/transforms-2/files-2.1/5fcd646d82005613ce0760fe33dddc17/AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.appcompat:appcompat:1.0.2] /home/bogdi/.gradle/caches/transforms-2/files-2.1/a6af80881496343447abcbc96c1e9aa9/AndroidManifest.xml:17:1-22:12
+MERGED from [com.facebook.fresco:fresco:2.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/d9c821dfad8e68d14ee9580ce36ab2f7/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/e4864bea13cbcecc22860c3d0b464b43/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:drawee:2.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/43cb5f67ebcde36ce07848f57dc22ea5/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:nativeimagefilters:2.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/0939042ea2aeb239b2972930b7763767/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline:2.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/362678bb708ee3a98519babd9a0607c8/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:nativeimagetranscoder:2.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/8eb4a3475cb59f3fec8f2ce1843809b0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline-base:2.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/375977b12a9ef144550e655ca76ca3c4/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.soloader:soloader:0.6.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/cd0ff8dedd39c752433cb9ba20c87e1a/AndroidManifest.xml:2:1-13:12
+MERGED from [androidx.fragment:fragment:1.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/311cd31e8fc86a0e281cf47cff7edce2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/9f00aafb80edd0ee7bb94a34bf7669dd/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/c13848f786b65c58482a00f8d7b5c13e/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/d9bc91d5a1c5143cf5f9b0e0688751af/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.1] /home/bogdi/.gradle/caches/transforms-2/files-2.1/13d5042329782424b707d9fa1b87f0ea/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/0214c2fd02f810ba762b9c027a7480fc/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/d01faf4b855d247f9a758c52a26fa0b0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/8112a2f89b0b93dcce5b6504dba80ce0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/cbb9f16e979c751e9c92304e6dfe2a5d/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/9da59d5444135628290670d7ca48f3ff/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/d640d924bb3bbed56f5b6bc9cbfc568e/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/75ba95aaac5e5fb539e93dbd88159c5c/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/0c782184305dffdb056561e7e6e53e32/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.0.1] /home/bogdi/.gradle/caches/transforms-2/files-2.1/8c9076fd3e3eadcb32c6f46ad1501047/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/4994ec24365b1b02c8b3608ea40f340f/AndroidManifest.xml:17:1-25:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/b785b26050d8bfa525292a74fc2d3efc/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/910594bf69c9a54f81bc12f22b5fd6ba/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/25ae8da765b4331cb3862af2db741991/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/97426cb2716f0a5398326e68b8d254b2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/669263fb26937c06636699133bb33ba0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/7024225b57793c731364b86c54907f90/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/a602b63c0a38bd9a56a1d8a1c7e230ca/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/ec87d1446c7b37396db29bac7a1a9295/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/a90d3d7683e5f8a94b613a52916e4a8e/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/3505030ebaf3b1b6405af1bf2e46646d/AndroidManifest.xml:17:1-22:12
+MERGED from [com.facebook.fresco:fbcore:2.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/58795fba27f5bb4a4fdc7eec2b111686/AndroidManifest.xml:2:1-9:12
+INJECTED from /home/bogdi/Desktop/itec/ItecMobile/android/app/src/debug/AndroidManifest.xml:2:1-8:12
+INJECTED from /home/bogdi/Desktop/itec/ItecMobile/android/app/src/debug/AndroidManifest.xml:2:1-8:12
+INJECTED from /home/bogdi/Desktop/itec/ItecMobile/android/app/src/debug/AndroidManifest.xml:2:1-8:12
+	package
+		ADDED from /home/bogdi/Desktop/itec/ItecMobile/android/app/src/main/AndroidManifest.xml:2:3-27
+		INJECTED from /home/bogdi/Desktop/itec/ItecMobile/android/app/src/main/AndroidManifest.xml
+		ADDED from /home/bogdi/Desktop/itec/ItecMobile/android/app/src/main/AndroidManifest.xml:2:3-27
+		INJECTED from /home/bogdi/Desktop/itec/ItecMobile/android/app/src/debug/AndroidManifest.xml
+	android:versionName
+		INJECTED from /home/bogdi/Desktop/itec/ItecMobile/android/app/src/main/AndroidManifest.xml
+		ADDED from /home/bogdi/Desktop/itec/ItecMobile/android/app/src/main/AndroidManifest.xml:1:1-26:12
+		INJECTED from /home/bogdi/Desktop/itec/ItecMobile/android/app/src/debug/AndroidManifest.xml
+	xmlns:tools
+		ADDED from /home/bogdi/Desktop/itec/ItecMobile/android/app/src/debug/AndroidManifest.xml:3:5-51
+	android:versionCode
+		INJECTED from /home/bogdi/Desktop/itec/ItecMobile/android/app/src/main/AndroidManifest.xml
+		ADDED from /home/bogdi/Desktop/itec/ItecMobile/android/app/src/main/AndroidManifest.xml:1:1-26:12
+		INJECTED from /home/bogdi/Desktop/itec/ItecMobile/android/app/src/debug/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/bogdi/Desktop/itec/ItecMobile/android/app/src/main/AndroidManifest.xml:1:11-69
+uses-permission#android.permission.INTERNET
+ADDED from /home/bogdi/Desktop/itec/ItecMobile/android/app/src/main/AndroidManifest.xml:4:5-67
+	android:name
+		ADDED from /home/bogdi/Desktop/itec/ItecMobile/android/app/src/main/AndroidManifest.xml:4:22-64
+application
+ADDED from /home/bogdi/Desktop/itec/ItecMobile/android/app/src/main/AndroidManifest.xml:6:5-24:19
+MERGED from /home/bogdi/Desktop/itec/ItecMobile/android/app/src/main/AndroidManifest.xml:6:5-24:19
+MERGED from /home/bogdi/Desktop/itec/ItecMobile/android/app/src/main/AndroidManifest.xml:6:5-24:19
+MERGED from [com.facebook.react:react-native:0.60.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/6d7360e65a00d8bbc706ae709abffe03/AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.react:react-native:0.60.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/6d7360e65a00d8bbc706ae709abffe03/AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.soloader:soloader:0.6.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/cd0ff8dedd39c752433cb9ba20c87e1a/AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.soloader:soloader:0.6.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/cd0ff8dedd39c752433cb9ba20c87e1a/AndroidManifest.xml:11:5-20
+MERGED from [androidx.core:core:1.0.1] /home/bogdi/.gradle/caches/transforms-2/files-2.1/8c9076fd3e3eadcb32c6f46ad1501047/AndroidManifest.xml:22:5-89
+MERGED from [androidx.core:core:1.0.1] /home/bogdi/.gradle/caches/transforms-2/files-2.1/8c9076fd3e3eadcb32c6f46ad1501047/AndroidManifest.xml:22:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/4994ec24365b1b02c8b3608ea40f340f/AndroidManifest.xml:22:5-23:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/4994ec24365b1b02c8b3608ea40f340f/AndroidManifest.xml:22:5-23:19
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.0.1] /home/bogdi/.gradle/caches/transforms-2/files-2.1/8c9076fd3e3eadcb32c6f46ad1501047/AndroidManifest.xml:22:18-86
+	android:label
+		ADDED from /home/bogdi/Desktop/itec/ItecMobile/android/app/src/main/AndroidManifest.xml:8:7-39
+		ADDED from /home/bogdi/Desktop/itec/ItecMobile/android/app/src/main/AndroidManifest.xml:8:7-39
+	tools:ignore
+		ADDED from /home/bogdi/Desktop/itec/ItecMobile/android/app/src/debug/AndroidManifest.xml:7:75-114
+	android:roundIcon
+		ADDED from /home/bogdi/Desktop/itec/ItecMobile/android/app/src/main/AndroidManifest.xml:10:7-52
+		ADDED from /home/bogdi/Desktop/itec/ItecMobile/android/app/src/main/AndroidManifest.xml:10:7-52
+	tools:targetApi
+		ADDED from /home/bogdi/Desktop/itec/ItecMobile/android/app/src/debug/AndroidManifest.xml:7:54-74
+	android:icon
+		ADDED from /home/bogdi/Desktop/itec/ItecMobile/android/app/src/main/AndroidManifest.xml:9:7-41
+		ADDED from /home/bogdi/Desktop/itec/ItecMobile/android/app/src/main/AndroidManifest.xml:9:7-41
+	android:allowBackup
+		ADDED from /home/bogdi/Desktop/itec/ItecMobile/android/app/src/main/AndroidManifest.xml:11:7-34
+		ADDED from /home/bogdi/Desktop/itec/ItecMobile/android/app/src/main/AndroidManifest.xml:11:7-34
+	android:theme
+		ADDED from /home/bogdi/Desktop/itec/ItecMobile/android/app/src/main/AndroidManifest.xml:12:7-38
+		ADDED from /home/bogdi/Desktop/itec/ItecMobile/android/app/src/main/AndroidManifest.xml:12:7-38
+	android:usesCleartextTraffic
+		ADDED from /home/bogdi/Desktop/itec/ItecMobile/android/app/src/debug/AndroidManifest.xml:7:18-53
+	android:name
+		ADDED from /home/bogdi/Desktop/itec/ItecMobile/android/app/src/main/AndroidManifest.xml:7:7-38
+		ADDED from /home/bogdi/Desktop/itec/ItecMobile/android/app/src/main/AndroidManifest.xml:7:7-38
+activity#com.itecmobile.MainActivity
+ADDED from /home/bogdi/Desktop/itec/ItecMobile/android/app/src/main/AndroidManifest.xml:13:7-22:18
+	android:label
+		ADDED from /home/bogdi/Desktop/itec/ItecMobile/android/app/src/main/AndroidManifest.xml:15:9-41
+	android:windowSoftInputMode
+		ADDED from /home/bogdi/Desktop/itec/ItecMobile/android/app/src/main/AndroidManifest.xml:17:9-51
+	android:configChanges
+		ADDED from /home/bogdi/Desktop/itec/ItecMobile/android/app/src/main/AndroidManifest.xml:16:9-79
+	android:name
+		ADDED from /home/bogdi/Desktop/itec/ItecMobile/android/app/src/main/AndroidManifest.xml:14:9-37
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /home/bogdi/Desktop/itec/ItecMobile/android/app/src/main/AndroidManifest.xml:18:9-21:25
+action#android.intent.action.MAIN
+ADDED from /home/bogdi/Desktop/itec/ItecMobile/android/app/src/main/AndroidManifest.xml:19:13-65
+	android:name
+		ADDED from /home/bogdi/Desktop/itec/ItecMobile/android/app/src/main/AndroidManifest.xml:19:21-62
+category#android.intent.category.LAUNCHER
+ADDED from /home/bogdi/Desktop/itec/ItecMobile/android/app/src/main/AndroidManifest.xml:20:13-73
+	android:name
+		ADDED from /home/bogdi/Desktop/itec/ItecMobile/android/app/src/main/AndroidManifest.xml:20:23-70
+activity#com.facebook.react.devsupport.DevSettingsActivity
+ADDED from /home/bogdi/Desktop/itec/ItecMobile/android/app/src/main/AndroidManifest.xml:23:7-84
+	android:name
+		ADDED from /home/bogdi/Desktop/itec/ItecMobile/android/app/src/main/AndroidManifest.xml:23:17-81
+uses-sdk
+INJECTED from /home/bogdi/Desktop/itec/ItecMobile/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/bogdi/Desktop/itec/ItecMobile/android/app/src/main/AndroidManifest.xml
+INJECTED from /home/bogdi/Desktop/itec/ItecMobile/android/app/src/main/AndroidManifest.xml
+MERGED from [com.facebook.react:react-native:0.60.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/6d7360e65a00d8bbc706ae709abffe03/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.react:react-native:0.60.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/6d7360e65a00d8bbc706ae709abffe03/AndroidManifest.xml:7:5-9:41
+MERGED from [org.webkit:android-jsc:r245459] /home/bogdi/.gradle/caches/transforms-2/files-2.1/5fcd646d82005613ce0760fe33dddc17/AndroidManifest.xml:7:5-9:41
+MERGED from [org.webkit:android-jsc:r245459] /home/bogdi/.gradle/caches/transforms-2/files-2.1/5fcd646d82005613ce0760fe33dddc17/AndroidManifest.xml:7:5-9:41
+MERGED from [androidx.appcompat:appcompat:1.0.2] /home/bogdi/.gradle/caches/transforms-2/files-2.1/a6af80881496343447abcbc96c1e9aa9/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.0.2] /home/bogdi/.gradle/caches/transforms-2/files-2.1/a6af80881496343447abcbc96c1e9aa9/AndroidManifest.xml:20:5-44
+MERGED from [com.facebook.fresco:fresco:2.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/d9c821dfad8e68d14ee9580ce36ab2f7/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fresco:2.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/d9c821dfad8e68d14ee9580ce36ab2f7/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/e4864bea13cbcecc22860c3d0b464b43/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/e4864bea13cbcecc22860c3d0b464b43/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:drawee:2.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/43cb5f67ebcde36ce07848f57dc22ea5/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:drawee:2.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/43cb5f67ebcde36ce07848f57dc22ea5/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagefilters:2.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/0939042ea2aeb239b2972930b7763767/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagefilters:2.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/0939042ea2aeb239b2972930b7763767/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:2.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/362678bb708ee3a98519babd9a0607c8/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:2.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/362678bb708ee3a98519babd9a0607c8/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagetranscoder:2.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/8eb4a3475cb59f3fec8f2ce1843809b0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagetranscoder:2.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/8eb4a3475cb59f3fec8f2ce1843809b0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-base:2.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/375977b12a9ef144550e655ca76ca3c4/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-base:2.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/375977b12a9ef144550e655ca76ca3c4/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.soloader:soloader:0.6.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/cd0ff8dedd39c752433cb9ba20c87e1a/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.soloader:soloader:0.6.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/cd0ff8dedd39c752433cb9ba20c87e1a/AndroidManifest.xml:7:5-9:41
+MERGED from [androidx.fragment:fragment:1.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/311cd31e8fc86a0e281cf47cff7edce2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/311cd31e8fc86a0e281cf47cff7edce2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/9f00aafb80edd0ee7bb94a34bf7669dd/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/9f00aafb80edd0ee7bb94a34bf7669dd/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/c13848f786b65c58482a00f8d7b5c13e/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/c13848f786b65c58482a00f8d7b5c13e/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/d9bc91d5a1c5143cf5f9b0e0688751af/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/d9bc91d5a1c5143cf5f9b0e0688751af/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.1] /home/bogdi/.gradle/caches/transforms-2/files-2.1/13d5042329782424b707d9fa1b87f0ea/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.1] /home/bogdi/.gradle/caches/transforms-2/files-2.1/13d5042329782424b707d9fa1b87f0ea/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/0214c2fd02f810ba762b9c027a7480fc/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/0214c2fd02f810ba762b9c027a7480fc/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/d01faf4b855d247f9a758c52a26fa0b0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/d01faf4b855d247f9a758c52a26fa0b0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/8112a2f89b0b93dcce5b6504dba80ce0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/8112a2f89b0b93dcce5b6504dba80ce0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/cbb9f16e979c751e9c92304e6dfe2a5d/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/cbb9f16e979c751e9c92304e6dfe2a5d/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/9da59d5444135628290670d7ca48f3ff/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/9da59d5444135628290670d7ca48f3ff/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/d640d924bb3bbed56f5b6bc9cbfc568e/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/d640d924bb3bbed56f5b6bc9cbfc568e/AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/75ba95aaac5e5fb539e93dbd88159c5c/AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/75ba95aaac5e5fb539e93dbd88159c5c/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/0c782184305dffdb056561e7e6e53e32/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/0c782184305dffdb056561e7e6e53e32/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.0.1] /home/bogdi/.gradle/caches/transforms-2/files-2.1/8c9076fd3e3eadcb32c6f46ad1501047/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.0.1] /home/bogdi/.gradle/caches/transforms-2/files-2.1/8c9076fd3e3eadcb32c6f46ad1501047/AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/4994ec24365b1b02c8b3608ea40f340f/AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/4994ec24365b1b02c8b3608ea40f340f/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/b785b26050d8bfa525292a74fc2d3efc/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/b785b26050d8bfa525292a74fc2d3efc/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/910594bf69c9a54f81bc12f22b5fd6ba/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/910594bf69c9a54f81bc12f22b5fd6ba/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/25ae8da765b4331cb3862af2db741991/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/25ae8da765b4331cb3862af2db741991/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/97426cb2716f0a5398326e68b8d254b2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/97426cb2716f0a5398326e68b8d254b2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/669263fb26937c06636699133bb33ba0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/669263fb26937c06636699133bb33ba0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/7024225b57793c731364b86c54907f90/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/7024225b57793c731364b86c54907f90/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/a602b63c0a38bd9a56a1d8a1c7e230ca/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/a602b63c0a38bd9a56a1d8a1c7e230ca/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/ec87d1446c7b37396db29bac7a1a9295/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/ec87d1446c7b37396db29bac7a1a9295/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/a90d3d7683e5f8a94b613a52916e4a8e/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/a90d3d7683e5f8a94b613a52916e4a8e/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/3505030ebaf3b1b6405af1bf2e46646d/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/3505030ebaf3b1b6405af1bf2e46646d/AndroidManifest.xml:20:5-44
+MERGED from [com.facebook.fresco:fbcore:2.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/58795fba27f5bb4a4fdc7eec2b111686/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fbcore:2.0.0] /home/bogdi/.gradle/caches/transforms-2/files-2.1/58795fba27f5bb4a4fdc7eec2b111686/AndroidManifest.xml:5:5-7:41
+INJECTED from /home/bogdi/Desktop/itec/ItecMobile/android/app/src/debug/AndroidManifest.xml
+INJECTED from /home/bogdi/Desktop/itec/ItecMobile/android/app/src/debug/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /home/bogdi/Desktop/itec/ItecMobile/android/app/src/main/AndroidManifest.xml
+		INJECTED from /home/bogdi/Desktop/itec/ItecMobile/android/app/src/debug/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/bogdi/Desktop/itec/ItecMobile/android/app/src/main/AndroidManifest.xml
+		INJECTED from /home/bogdi/Desktop/itec/ItecMobile/android/app/src/debug/AndroidManifest.xml
+uses-permission#android.permission.SYSTEM_ALERT_WINDOW
+ADDED from /home/bogdi/Desktop/itec/ItecMobile/android/app/src/debug/AndroidManifest.xml:5:5-77
+	android:name
+		ADDED from /home/bogdi/Desktop/itec/ItecMobile/android/app/src/debug/AndroidManifest.xml:5:22-75
