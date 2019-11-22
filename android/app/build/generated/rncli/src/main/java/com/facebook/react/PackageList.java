@@ -15,6 +15,8 @@ import com.itecmobile.R;
 
 // react-native-gesture-handler
 import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
+// react-native-maps
+import com.airbnb.android.react.maps.MapsPackage;
 // react-native-reanimated
 import com.swmansion.reanimated.ReanimatedPackage;
 // react-native-screens
@@ -55,6 +57,7 @@ public class PackageList {
     return new ArrayList<>(Arrays.<ReactPackage>asList(
       new MainReactPackage(),
       new RNGestureHandlerPackage(),
+      new MapsPackage(),
       new ReanimatedPackage(),
       new RNScreensPackage(),
       new VectorIconsPackage()

@@ -5,6 +5,7 @@ import LoginScreen from './Login/Login'
 import ForumScreen from './Forum/Forum'
 import MapScreen from './Map/Map'
 import ProfileScreen from './Profile/Profile'
+import AuthLoadingScreen from './AuthLoading/AuthLoading'
 
 import { BLACK_COLOR, WHITE_COLOR } from '../../styles/stylesConstants'
 import Icon from 'react-native-vector-icons/FontAwesome5'
@@ -57,7 +58,8 @@ const UnauthStack = createStackNavigator({
 
 const ApplicationStack = createSwitchNavigator({
     Auth: AuthStack,
-    Unauth: UnauthStack
+    Unauth: UnauthStack,
+    AuthLoading: AuthLoadingScreen
 }, {
     initialRouteName: 'Auth'
 })

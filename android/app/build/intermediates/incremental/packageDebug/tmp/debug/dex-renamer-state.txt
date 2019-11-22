@@ -1,4 +1,4 @@
-#Fri Nov 22 21:58:16 EET 2019
+#Fri Nov 22 22:49:30 EET 2019
 base.0=/home/bogdi/Desktop/itec/ItecMobile/android/app/build/intermediates/transforms/dexMerger/debug/0
 path.0=classes.dex
 renamed.0=classes.dex
