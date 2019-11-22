@@ -1,0 +1,6 @@
+export const BLACK_COLOR = '#3e3f42'
+export const GREY_COLOR = '#6b6c6f'
+export const LIGHT_GREY_COLOR = '#9ea0a5'
+export const ORANGE_COLOR = '#f6ab2f'
+export const GREEN_COLOR = '#34aa44'
+export const WHITE_COLOR = '#ffffff'

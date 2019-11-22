@@ -19,6 +19,8 @@ import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
 import com.swmansion.reanimated.ReanimatedPackage;
 // react-native-screens
 import com.swmansion.rnscreens.RNScreensPackage;
+// react-native-vector-icons
+import com.oblador.vectoricons.VectorIconsPackage;
 
 public class PackageList {
   private Application application;
@@ -54,7 +56,8 @@ public class PackageList {
       new MainReactPackage(),
       new RNGestureHandlerPackage(),
       new ReanimatedPackage(),
-      new RNScreensPackage()
+      new RNScreensPackage(),
+      new VectorIconsPackage()
     ));
   }
 }

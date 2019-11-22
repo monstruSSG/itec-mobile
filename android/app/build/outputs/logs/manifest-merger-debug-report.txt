@@ -8,6 +8,7 @@ MERGED from /home/bogdi/Desktop/itec/ItecMobile/android/app/src/main/AndroidMani
 MERGED from [:react-native-gesture-handler] /home/bogdi/Desktop/itec/ItecMobile/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-reanimated] /home/bogdi/Desktop/itec/ItecMobile/node_modules/react-native-reanimated/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-screens] /home/bogdi/Desktop/itec/ItecMobile/node_modules/react-native-screens/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-vector-icons] /home/bogdi/Desktop/itec/ItecMobile/node_modules/react-native-vector-icons/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [com.facebook.react:react-native:0.60.0] /root/.gradle/caches/transforms-2/files-2.1/f9bca90104418cf48a35a712a43254d0/AndroidManifest.xml:2:1-13:12
 MERGED from [org.webkit:android-jsc:r245459] /root/.gradle/caches/transforms-2/files-2.1/5fcd646d82005613ce0760fe33dddc17/AndroidManifest.xml:2:1-11:12
 MERGED from [com.google.android.material:material:1.0.0] /root/.gradle/caches/transforms-2/files-2.1/89ec7b5226398ba4c32abbaf004529ae/AndroidManifest.xml:17:1-24:12
@@ -150,6 +151,8 @@ MERGED from [:react-native-reanimated] /home/bogdi/Desktop/itec/ItecMobile/node_
 MERGED from [:react-native-reanimated] /home/bogdi/Desktop/itec/ItecMobile/node_modules/react-native-reanimated/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-screens] /home/bogdi/Desktop/itec/ItecMobile/node_modules/react-native-screens/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-screens] /home/bogdi/Desktop/itec/ItecMobile/node_modules/react-native-screens/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-vector-icons] /home/bogdi/Desktop/itec/ItecMobile/node_modules/react-native-vector-icons/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-vector-icons] /home/bogdi/Desktop/itec/ItecMobile/node_modules/react-native-vector-icons/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.react:react-native:0.60.0] /root/.gradle/caches/transforms-2/files-2.1/f9bca90104418cf48a35a712a43254d0/AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.react:react-native:0.60.0] /root/.gradle/caches/transforms-2/files-2.1/f9bca90104418cf48a35a712a43254d0/AndroidManifest.xml:7:5-9:41
 MERGED from [org.webkit:android-jsc:r245459] /root/.gradle/caches/transforms-2/files-2.1/5fcd646d82005613ce0760fe33dddc17/AndroidManifest.xml:7:5-9:41
