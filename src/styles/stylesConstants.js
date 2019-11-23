@@ -11,3 +11,4 @@ export const WIDTH = Dimensions.get('window').width
 export const HEIGHT = Dimensions.get('window').height
 export const LOGO_DIMENSION = WIDTH / 16
 export const INPUT_HEIGHT = HEIGHT / 12
+export const AVATAR_SIZE = HEIGHT / 7 

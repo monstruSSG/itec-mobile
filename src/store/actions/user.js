@@ -6,6 +6,12 @@ import axios from '../../utils/axios'
 
 const PREFIX = '/AUTH'
 
+export const getMe = token => dispatch => axios.get(`${PREFIX}/Me`, {
+    headers: {
+        'Authorization': `Bearer ${token}`
+    }
+}).then(res => Promise.resolve(res.data))
+
 export const login = (email, password) => dispatch => axios.post(`${PREFIX}/Login`, {
     email,
     password
