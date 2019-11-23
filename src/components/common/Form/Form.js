@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
 export default props => (
     <View style={[commonStyle.max]}>
         <View style={[styles.inputs, styles.center]}>
-            {props.inputs.map(input => <Input reverse={props.reverse ? true : undefined} {...input} />)}
+            {props.inputs.map(input => <Input key={input.placeholder} reverse={props.reverse ? true : undefined} {...input} />)}
         </View>
         <Button {...props} normal onPress={props.onSubmit} text={props.submitText} />
         {props.cancel ? <View style={{marginTop: 20, marginBottom: 20}}><Button styles={{

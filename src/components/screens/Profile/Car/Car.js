@@ -47,12 +47,12 @@ const styles = StyleSheet.create({
 export default props => (
     <View style={[styles.container]}>
         <View style={[styles.name]}>
-            <CustomText small>Model 3</CustomText>
-            <CustomText small>Tesla</CustomText>
+            <CustomText small>{props.model}</CustomText>
+            <CustomText small>{props.company}</CustomText>
         </View>
         <View style={[styles.battery]}>
             <Icon size={WIDTH / 12} name='battery-full' color={BLACK_COLOR} />
-            <CustomText>80%</CustomText>
+            <CustomText>{props.battery}%</CustomText>
         </View>
         <View style={[styles.editButton]}>
             <TouchableOpacity style={[styles.edit]}>

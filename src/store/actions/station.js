@@ -4,3 +4,4 @@ const PREFIX = '/Stations'
 
 export const getStations = token => dispatch => axios.get(`${PREFIX}`, { headers: { 'Authorization': `Bearer ${token}` } })
     .then(res => Promise.resolve(res.data))
+

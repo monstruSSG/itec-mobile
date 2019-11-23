@@ -6,6 +6,7 @@ import Icon from 'react-native-vector-icons/Octicons'
 
 import CustomText from '../../common/Text/Text'
 import * as USER from '../../../store/actions/user'
+import * as CAR from '../../../store/actions/car'
 import { getToken } from '../../../utils/token'
 import Gravatar from '../../common/Gravatar/Gravatar'
 import Car from './Car/Car'
@@ -63,12 +64,15 @@ class Profile extends Component {
         firstName: '',
         lastName: '',
         email: '',
-        render: false
+        render: false,
+        showAddCarModal: false,
+        cars: []
     }
 
     async componentDidMount() {
         this.token = await getToken()
         this.getMe()
+        this.getCars()
     }
 
     getMe = () => this.props.getMe(this.token).then(me => this.setState({
@@ -76,10 +80,23 @@ class Profile extends Component {
         render: true
     }))
 
+    getCars = () => this.props.getCars(this.token)
+        .then(cars => this.setState({ cars }, () => console.log(this.state.cars)))
+
+    onCarSubmitHandler = car => {
+        this.setState({ showAddCarModal: false })
+        this.props.createCar(this.token, car)
+            .then(this.getCars)
+    }
+
     render() {
         return (
             <View style={[commonStyles.max, commonStyles.centerX]}>
-                <AddCar visible={true}/>
+                <AddCar
+                    visible={this.state.showAddCarModal}
+                    onSubmit={this.onCarSubmitHandler}
+                    onCancel={() => this.setState({ showAddCarModal: false })}
+                />
                 {this.state.render && <>
                     <View style={[styles.header]}>
                         <View style={[styles.icon]}>
@@ -91,49 +108,18 @@ class Profile extends Component {
                         </View>
                     </View>
                     <View style={[styles.cars]}>
-                        <TouchableOpacity style={[styles.addCar]}>
+                        <TouchableOpacity style={[styles.addCar]} onPress={() => this.setState({ showAddCarModal: true })}>
                             <CustomText large color={WHITE_COLOR}>CAR</CustomText>
-                            <Icon name='plus' size={WIDTH / 12} color={WHITE_COLOR} style={styles.plusIcon}/>
+                            <Icon name='plus' size={WIDTH / 12} color={WHITE_COLOR} style={styles.plusIcon} />
                         </TouchableOpacity>
                         <View style={[commonStyles.carList]}>
                             <FlatList
                                 style={[commonStyles.max]}
-                                data={[
-                                    {
-                                        key: 'Devin',
-                                        model: "string",
-                                        company: "string",
-                                        year: 0,
-                                        autonomy: 0,
-                                        batteryLeft: 0,
-                                        lastTechRevision: "2019-11-23T15:07:34.050Z",
-                                        userId: "string",
-                                        id: "string"
-                                    },
-                                    {
-                                        key: 'Devin',
-                                        model: "string",
-                                        company: "string",
-                                        year: 0,
-                                        autonomy: 0,
-                                        batteryLeft: 0,
-                                        lastTechRevision: "2019-11-23T15:07:34.050Z",
-                                        userId: "string",
-                                        id: "string"
-                                    }, {
-                                        key: 'Devin',
-                                        model: "string",
-                                        company: "string",
-                                        year: 0,
-                                        autonomy: 0,
-                                        batteryLeft: 0,
-                                        lastTechRevision: "2019-11-23T15:07:34.050Z",
-                                        userId: "string",
-                                        id: "string"
-                                    }
-
-                                ]}
-                                renderItem={({ item }) => <Car />}
+                                data={this.state.cars.map(car => ({
+                                    key: car.id,
+                                    ...car
+                                }))}
+                                renderItem={({ item }) => <Car model={item.model} company={item.company} battery={item.batteryLeft}  />}
                             />
                         </View>
                     </View>
@@ -146,7 +132,9 @@ class Profile extends Component {
 const mapStateToProps = reducers => ({})
 
 const mapDispatchToProps = dispatch => ({
-    getMe: token => dispatch(USER.getMe(token))
+    getMe: token => dispatch(USER.getMe(token)),
+    getCars: token => dispatch(CAR.getCars(token)),
+    createCar: (token, car) => dispatch(CAR.createCar(token, car))
 })
 
 export default connect(

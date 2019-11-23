@@ -6,7 +6,7 @@ import { BLACK_COLOR, WHITE_COLOR } from '../../../styles/stylesConstants'
 import CustomText from '../Text/Text'
 
 const modalTemplate = props => (
-    <Modal visible={props.isVisible} onRequestClose={props.onClose} animationType={props.modalAnimation ? props.modalAnimation : 'slide'} transparent>
+    <Modal visible={props.visible} onRequestClose={props.onClose} animationType={props.modalAnimation ? props.modalAnimation : 'slide'} transparent>
         <View style={[styles.max, styles.center, styles.container]}>
             <View style={[styles.content]}>
                 <View style={[styles.header]}>
