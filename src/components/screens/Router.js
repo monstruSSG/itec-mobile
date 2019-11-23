@@ -15,7 +15,7 @@ const AuthStack = createBottomTabNavigator({
     Map: {
         screen: MapScreen,
         navigationOptions: {
-            tabBarIcon: ({ tintColor, activeTintColor }) => (
+            tabBarIcon: ({ tintColor }) => (
                 <Icon name='map-marked' size={LOGO_DIMENSION} color={tintColor} />
             )
         },
@@ -23,7 +23,7 @@ const AuthStack = createBottomTabNavigator({
     Forum: {
         screen: ForumScreen,
         navigationOptions: {
-            tabBarIcon: ({ tintColor, activeTintColor }) => (
+            tabBarIcon: ({ tintColor }) => (
                 <Icon name='rocketchat' size={LOGO_DIMENSION} color={tintColor} />
             )
         },
@@ -31,7 +31,7 @@ const AuthStack = createBottomTabNavigator({
     Profile: {
         screen: ProfileScreen,
         navigationOptions: {
-            tabBarIcon: ({ tintColor, activeTintColor }) => (
+            tabBarIcon: ({ tintColor }) => (
                 <Icon name='user' size={LOGO_DIMENSION} color={tintColor} />
             )
         },

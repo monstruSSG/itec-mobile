@@ -3,7 +3,6 @@ import { View, StyleSheet, Keyboard, KeyboardAvoidingView } from 'react-native'
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 
 import Form from '../../../components/common/Form/Form'
-import CustomText from '../../../components/common/Text/Text'
 import Button from '../../../components/common/Button/Button'
 
 import commonStyles from '../../../styles/common'
@@ -81,13 +80,13 @@ class Login extends Component {
                     <Form
                         inputs={[
                             { placeholder: 'EMAIL', type: 'text', value: this.state.email, onChangeText: text => this.setState({ email: text }) },
-                            { placeholder: 'PASSWORD', type: 'password', value: this.state.password, onChangeText: text => this.setState({ password: text }) }
+                            { placeholder: 'PASSWORD', type: 'password', secureTextEntry: true, value: this.state.password, onChangeText: text => this.setState({ password: text }) }
                         ]}
-                        submitText='Login'
+                        submitText='LOGIN'
                         onSubmit={this.onSubmitPressedHandler} />
                 </View>
                 {!this.state.showKeyboard && <View style={[commonStyles.centerX, styles.register]}>
-                    <Button onPress={this.navigateRegisterHandler} styles={styles.registerButton} color={WHITE_COLOR} normal text='Register' />
+                    <Button onPress={this.navigateRegisterHandler} styles={styles.registerButton} color={WHITE_COLOR} normal text='REGISTER' />
                 </View>}
             </KeyboardAvoidingView>
         )

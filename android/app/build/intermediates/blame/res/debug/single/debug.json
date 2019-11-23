@@ -56,12 +56,12 @@
         "source": "/root/.gradle/caches/transforms-2/files-2.1/035ee42de9f3a022f155ade667c49e80/res/raw/amu_visibility_ground_overlay.kml"
     },
     {
-        "merged": "/home/bogdi/Desktop/itec/ItecMobile/android/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_ic_menu_cut_mtrl_alpha.png.flat",
-        "source": "/root/.gradle/caches/transforms-2/files-2.1/c68372f3b8ca68dac4b78ee26a5bf434/res/drawable-hdpi-v4/abc_ic_menu_cut_mtrl_alpha.png"
-    },
-    {
         "merged": "/home/bogdi/Desktop/itec/ItecMobile/android/app/build/intermediates/res/merged/debug/layout_mtrl_layout_snackbar_include.xml.flat",
         "source": "/root/.gradle/caches/transforms-2/files-2.1/89ec7b5226398ba4c32abbaf004529ae/res/layout/mtrl_layout_snackbar_include.xml"
+    },
+    {
+        "merged": "/home/bogdi/Desktop/itec/ItecMobile/android/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_ic_menu_cut_mtrl_alpha.png.flat",
+        "source": "/root/.gradle/caches/transforms-2/files-2.1/c68372f3b8ca68dac4b78ee26a5bf434/res/drawable-hdpi-v4/abc_ic_menu_cut_mtrl_alpha.png"
     },
     {
         "merged": "/home/bogdi/Desktop/itec/ItecMobile/android/app/build/intermediates/res/merged/debug/layout_design_layout_tab_text.xml.flat",
@@ -124,12 +124,12 @@
         "source": "/root/.gradle/caches/transforms-2/files-2.1/99c99efd82bb3ddea925a76debfbea5f/res/layout/notification_media_action.xml"
     },
     {
-        "merged": "/home/bogdi/Desktop/itec/ItecMobile/android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_ic_star_half_black_36dp.png.flat",
-        "source": "/root/.gradle/caches/transforms-2/files-2.1/c68372f3b8ca68dac4b78ee26a5bf434/res/drawable-xhdpi-v4/abc_ic_star_half_black_36dp.png"
-    },
-    {
         "merged": "/home/bogdi/Desktop/itec/ItecMobile/android/app/build/intermediates/res/merged/debug/raw_amu_unknwown_folder.kml.flat",
         "source": "/root/.gradle/caches/transforms-2/files-2.1/035ee42de9f3a022f155ade667c49e80/res/raw/amu_unknwown_folder.kml"
+    },
+    {
+        "merged": "/home/bogdi/Desktop/itec/ItecMobile/android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_ic_star_half_black_36dp.png.flat",
+        "source": "/root/.gradle/caches/transforms-2/files-2.1/c68372f3b8ca68dac4b78ee26a5bf434/res/drawable-xhdpi-v4/abc_ic_star_half_black_36dp.png"
     },
     {
         "merged": "/home/bogdi/Desktop/itec/ItecMobile/android/app/build/intermediates/res/merged/debug/drawable-v21_abc_btn_colored_material.xml.flat",
@@ -192,48 +192,48 @@
         "source": "/root/.gradle/caches/transforms-2/files-2.1/c68372f3b8ca68dac4b78ee26a5bf434/res/drawable-mdpi-v4/abc_spinner_mtrl_am_alpha.9.png"
     },
     {
-        "merged": "/home/bogdi/Desktop/itec/ItecMobile/android/app/build/intermediates/res/merged/debug/color_design_tint_password_toggle.xml.flat",
-        "source": "/root/.gradle/caches/transforms-2/files-2.1/89ec7b5226398ba4c32abbaf004529ae/res/color/design_tint_password_toggle.xml"
-    },
-    {
         "merged": "/home/bogdi/Desktop/itec/ItecMobile/android/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_common_google_signin_btn_icon_light_normal_background.9.png.flat",
         "source": "/root/.gradle/caches/transforms-2/files-2.1/0c8bfa4bbf1a79c946f432f85c09f00e/res/drawable-mdpi-v4/common_google_signin_btn_icon_light_normal_background.9.png"
+    },
+    {
+        "merged": "/home/bogdi/Desktop/itec/ItecMobile/android/app/build/intermediates/res/merged/debug/color_design_tint_password_toggle.xml.flat",
+        "source": "/root/.gradle/caches/transforms-2/files-2.1/89ec7b5226398ba4c32abbaf004529ae/res/color/design_tint_password_toggle.xml"
     },
     {
         "merged": "/home/bogdi/Desktop/itec/ItecMobile/android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_scrubber_primary_mtrl_alpha.9.png.flat",
         "source": "/root/.gradle/caches/transforms-2/files-2.1/c68372f3b8ca68dac4b78ee26a5bf434/res/drawable-xhdpi-v4/abc_scrubber_primary_mtrl_alpha.9.png"
     },
     {
-        "merged": "/home/bogdi/Desktop/itec/ItecMobile/android/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_notification_bg_normal_pressed.9.png.flat",
-        "source": "/root/.gradle/caches/transforms-2/files-2.1/3ec07f8fa591c5aa899d119b534364e6/res/drawable-mdpi-v4/notification_bg_normal_pressed.9.png"
-    },
-    {
         "merged": "/home/bogdi/Desktop/itec/ItecMobile/android/app/build/intermediates/res/merged/debug/drawable_design_snackbar_background.xml.flat",
         "source": "/root/.gradle/caches/transforms-2/files-2.1/89ec7b5226398ba4c32abbaf004529ae/res/drawable/design_snackbar_background.xml"
     },
     {
-        "merged": "/home/bogdi/Desktop/itec/ItecMobile/android/app/build/intermediates/res/merged/debug/drawable-ldrtl-hdpi-v17_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
-        "source": "/root/.gradle/caches/transforms-2/files-2.1/c68372f3b8ca68dac4b78ee26a5bf434/res/drawable-ldrtl-hdpi-v17/abc_ic_menu_copy_mtrl_am_alpha.png"
+        "merged": "/home/bogdi/Desktop/itec/ItecMobile/android/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_notification_bg_normal_pressed.9.png.flat",
+        "source": "/root/.gradle/caches/transforms-2/files-2.1/3ec07f8fa591c5aa899d119b534364e6/res/drawable-mdpi-v4/notification_bg_normal_pressed.9.png"
     },
     {
         "merged": "/home/bogdi/Desktop/itec/ItecMobile/android/app/build/intermediates/res/merged/debug/interpolator_btn_checkbox_checked_mtrl_animation_interpolator_0.xml.flat",
         "source": "/root/.gradle/caches/transforms-2/files-2.1/c68372f3b8ca68dac4b78ee26a5bf434/res/interpolator/btn_checkbox_checked_mtrl_animation_interpolator_0.xml"
     },
     {
-        "merged": "/home/bogdi/Desktop/itec/ItecMobile/android/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_ic_menu_cut_mtrl_alpha.png.flat",
-        "source": "/root/.gradle/caches/transforms-2/files-2.1/c68372f3b8ca68dac4b78ee26a5bf434/res/drawable-mdpi-v4/abc_ic_menu_cut_mtrl_alpha.png"
+        "merged": "/home/bogdi/Desktop/itec/ItecMobile/android/app/build/intermediates/res/merged/debug/drawable-ldrtl-hdpi-v17_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
+        "source": "/root/.gradle/caches/transforms-2/files-2.1/c68372f3b8ca68dac4b78ee26a5bf434/res/drawable-ldrtl-hdpi-v17/abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
-        "merged": "/home/bogdi/Desktop/itec/ItecMobile/android/app/build/intermediates/res/merged/debug/interpolator-v21_mtrl_fast_out_slow_in.xml.flat",
-        "source": "/root/.gradle/caches/transforms-2/files-2.1/89ec7b5226398ba4c32abbaf004529ae/res/interpolator-v21/mtrl_fast_out_slow_in.xml"
+        "merged": "/home/bogdi/Desktop/itec/ItecMobile/android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_notification_bg_low_normal.9.png.flat",
+        "source": "/root/.gradle/caches/transforms-2/files-2.1/3ec07f8fa591c5aa899d119b534364e6/res/drawable-xhdpi-v4/notification_bg_low_normal.9.png"
     },
     {
         "merged": "/home/bogdi/Desktop/itec/ItecMobile/android/app/build/intermediates/res/merged/debug/color_abc_secondary_text_material_light.xml.flat",
         "source": "/root/.gradle/caches/transforms-2/files-2.1/c68372f3b8ca68dac4b78ee26a5bf434/res/color/abc_secondary_text_material_light.xml"
     },
     {
-        "merged": "/home/bogdi/Desktop/itec/ItecMobile/android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_notification_bg_low_normal.9.png.flat",
-        "source": "/root/.gradle/caches/transforms-2/files-2.1/3ec07f8fa591c5aa899d119b534364e6/res/drawable-xhdpi-v4/notification_bg_low_normal.9.png"
+        "merged": "/home/bogdi/Desktop/itec/ItecMobile/android/app/build/intermediates/res/merged/debug/interpolator-v21_mtrl_fast_out_slow_in.xml.flat",
+        "source": "/root/.gradle/caches/transforms-2/files-2.1/89ec7b5226398ba4c32abbaf004529ae/res/interpolator-v21/mtrl_fast_out_slow_in.xml"
+    },
+    {
+        "merged": "/home/bogdi/Desktop/itec/ItecMobile/android/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_ic_menu_cut_mtrl_alpha.png.flat",
+        "source": "/root/.gradle/caches/transforms-2/files-2.1/c68372f3b8ca68dac4b78ee26a5bf434/res/drawable-mdpi-v4/abc_ic_menu_cut_mtrl_alpha.png"
     },
     {
         "merged": "/home/bogdi/Desktop/itec/ItecMobile/android/app/build/intermediates/res/merged/debug/drawable_common_google_signin_btn_text_dark.xml.flat",
@@ -266,6 +266,10 @@
     {
         "merged": "/home/bogdi/Desktop/itec/ItecMobile/android/app/build/intermediates/res/merged/debug/layout_design_navigation_item_header.xml.flat",
         "source": "/root/.gradle/caches/transforms-2/files-2.1/89ec7b5226398ba4c32abbaf004529ae/res/layout/design_navigation_item_header.xml"
+    },
+    {
+        "merged": "/home/bogdi/Desktop/itec/ItecMobile/android/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "/home/bogdi/Desktop/itec/ItecMobile/android/app/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png"
     },
     {
         "merged": "/home/bogdi/Desktop/itec/ItecMobile/android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_googleg_disabled_color_18.png.flat",
@@ -374,6 +378,10 @@
     {
         "merged": "/home/bogdi/Desktop/itec/ItecMobile/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_list_pressed_holo_light.9.png.flat",
         "source": "/root/.gradle/caches/transforms-2/files-2.1/c68372f3b8ca68dac4b78ee26a5bf434/res/drawable-xxhdpi-v4/abc_list_pressed_holo_light.9.png"
+    },
+    {
+        "merged": "/home/bogdi/Desktop/itec/ItecMobile/android/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "/home/bogdi/Desktop/itec/ItecMobile/android/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml"
     },
     {
         "merged": "/home/bogdi/Desktop/itec/ItecMobile/android/app/build/intermediates/res/merged/debug/color_abc_primary_text_material_light.xml.flat",
@@ -726,6 +734,10 @@
     {
         "merged": "/home/bogdi/Desktop/itec/ItecMobile/android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_btn_radio_to_on_mtrl_000.png.flat",
         "source": "/root/.gradle/caches/transforms-2/files-2.1/c68372f3b8ca68dac4b78ee26a5bf434/res/drawable-xhdpi-v4/abc_btn_radio_to_on_mtrl_000.png"
+    },
+    {
+        "merged": "/home/bogdi/Desktop/itec/ItecMobile/android/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "/home/bogdi/Desktop/itec/ItecMobile/android/app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png"
     },
     {
         "merged": "/home/bogdi/Desktop/itec/ItecMobile/android/app/build/intermediates/res/merged/debug/layout_notification_media_cancel_action.xml.flat",
@@ -1134,6 +1146,10 @@
     {
         "merged": "/home/bogdi/Desktop/itec/ItecMobile/android/app/build/intermediates/res/merged/debug/layout_notification_template_icon_group.xml.flat",
         "source": "/root/.gradle/caches/transforms-2/files-2.1/3ec07f8fa591c5aa899d119b534364e6/res/layout/notification_template_icon_group.xml"
+    },
+    {
+        "merged": "/home/bogdi/Desktop/itec/ItecMobile/android/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "/home/bogdi/Desktop/itec/ItecMobile/android/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
         "merged": "/home/bogdi/Desktop/itec/ItecMobile/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_textfield_search_activated_mtrl_alpha.9.png.flat",
@@ -1916,6 +1932,10 @@
         "source": "/root/.gradle/caches/transforms-2/files-2.1/89ec7b5226398ba4c32abbaf004529ae/res/animator-v21/design_appbar_state_list_animator.xml"
     },
     {
+        "merged": "/home/bogdi/Desktop/itec/ItecMobile/android/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "/home/bogdi/Desktop/itec/ItecMobile/android/app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png"
+    },
+    {
         "merged": "/home/bogdi/Desktop/itec/ItecMobile/android/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_btn_check_to_on_mtrl_000.png.flat",
         "source": "/root/.gradle/caches/transforms-2/files-2.1/c68372f3b8ca68dac4b78ee26a5bf434/res/drawable-mdpi-v4/abc_btn_check_to_on_mtrl_000.png"
     },
@@ -2216,6 +2236,10 @@
         "source": "/root/.gradle/caches/transforms-2/files-2.1/3ec07f8fa591c5aa899d119b534364e6/res/drawable/notification_tile_bg.xml"
     },
     {
+        "merged": "/home/bogdi/Desktop/itec/ItecMobile/android/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "/home/bogdi/Desktop/itec/ItecMobile/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png"
+    },
+    {
         "merged": "/home/bogdi/Desktop/itec/ItecMobile/android/app/build/intermediates/res/merged/debug/layout_abc_cascading_menu_item_layout.xml.flat",
         "source": "/root/.gradle/caches/transforms-2/files-2.1/c68372f3b8ca68dac4b78ee26a5bf434/res/layout/abc_cascading_menu_item_layout.xml"
     },
@@ -2302,6 +2326,10 @@
     {
         "merged": "/home/bogdi/Desktop/itec/ItecMobile/android/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
         "source": "/root/.gradle/caches/transforms-2/files-2.1/c68372f3b8ca68dac4b78ee26a5bf434/res/drawable-xxxhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "/home/bogdi/Desktop/itec/ItecMobile/android/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "/home/bogdi/Desktop/itec/ItecMobile/android/app/src/main/res/mipmap-mdpi/ic_launcher_foreground.png"
     },
     {
         "merged": "/home/bogdi/Desktop/itec/ItecMobile/android/app/build/intermediates/res/merged/debug/layout_abc_search_dropdown_item_icons_2line.xml.flat",
