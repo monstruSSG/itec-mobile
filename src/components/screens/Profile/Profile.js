@@ -104,7 +104,7 @@ class Profile extends Component {
                 {this.state.render && <>
                     <View style={[styles.header]}>
                         <View style={[styles.icon]}>
-                            <Gravatar style={styles.avatar} email='giurgibogdans@gmail.com' />
+                            <Gravatar style={styles.avatar} email={this.state.email} />
                         </View>
                         <View style={[styles.name]}>
                             <CustomText small color={GREY_COLOR}>{this.state.firstName} {this.state.lastName}</CustomText>

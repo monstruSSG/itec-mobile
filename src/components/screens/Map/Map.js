@@ -10,9 +10,11 @@ import Icon from 'react-native-vector-icons/FontAwesome'
 import { regionFrom } from '../../../utils/location'
 import * as STATION from '../../../store/actions/station'
 import { getToken } from '../../../utils/token'
+import AddStationModal from './AddStationModal/AddStationModal'
 
 import commonStyles from '../../../styles/common'
 import { BLACK_COLOR } from '../../../styles/stylesConstants'
+import StationDetailsModal from './StationDetailsModal/StationDetailsModal'
 
 const styles = StyleSheet.create({
     floatingAdd: {
@@ -33,12 +35,15 @@ const styles = StyleSheet.create({
 class Map extends Component {
     state = {
         currentPosition: {
-            latitude: 37.78825,
-            longitude: -122.4324,
+            latitude: 45.7489,
+            longitude: 21.2087,
             latitudeDelta: 0.0922,
             longitudeDelta: 0.0421
         },
         stations: [],
+        showStationModal: false,
+        selectedStation: null,
+        showDetailsModal: false
     }
 
     async componentDidMount() {
@@ -71,6 +76,8 @@ class Map extends Component {
 
     getStations = () => this.props.getStations(this.token).then(stations => this.setState({ stations }))
 
+    onSubmitPressedHandler = station => this.props.createStation(this.token, station).then(() => this.setState({ showStationModal: false }))
+
     render() {
         return (
             <View style={[commonStyles.max, commonStyles.centerX, styles.content]}>
@@ -78,21 +85,30 @@ class Map extends Component {
                     style={[commonStyles.max, { ...StyleSheet.absoluteFillObject }]}
                     provider={PROVIDER_GOOGLE}
                     initialRegion={this.state.currentPosition}
-                    onRegionChange={console.log}
                 >
-                    <MapView.Marker
+                    {this.state.stations.map(station => <MapView.Marker
                         draggable
                         coordinate={{
-                            latitude: 37.78825,
-                            longitude: -122.4324
+                            latitude: station.location.x,
+                            longitude: station.location.y
                         }}
-                        title={"title"}
-                        description={"description"}
-                    />
+                        title={station.name}
+                        onPress={() => this.setState({ selectedStation: station, showDetailsModal: true })}
+                    />)}
+
                 </MapView>
-                <TouchableOpacity style={[styles.floatingAdd]} onPress={() => alert()}>
+                <TouchableOpacity style={[styles.floatingAdd]} onPress={() => this.setState({ showStationModal: true })}>
                     <Icon name='plus-circle' size={50} />
                 </TouchableOpacity>
+                <StationDetailsModal
+                    station={this.state.selectedStation}
+                    visible={this.state.showDetailsModal}
+                    onCancel={() => this.setState({showDetailsModal: false})}
+                />
+                <AddStationModal
+                    onSubmit={this.onSubmitPressedHandler}
+                    visible={this.state.showStationModal}
+                    onCancel={() => this.setState({ showStationModal: false })} />
             </View>
         )
     }
@@ -102,7 +118,8 @@ const mapStateToProps = reducers => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-    getStations: token => dispatch(STATION.getStations(token))
+    getStations: token => dispatch(STATION.getStations(token)),
+    createStation: (token, station) => dispatch(STATION.createStation(token, station))
 })
 
 export default connect(

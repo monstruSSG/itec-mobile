@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Modal, View, ScrollView } from 'react-native';
+import { StyleSheet, Modal, View, TouchableOpacity } from 'react-native';
 
 import { BLACK_COLOR, WHITE_COLOR } from '../../../styles/stylesConstants'
 

@@ -11,19 +11,25 @@ class AddCarModal extends Component {
         year: '',
         autonomy: '',
         batteryLeft: '',
-        lastTechRevision: '',
-        cars: []
+        lastTechRevision: ''
     }
 
     onSubmitPressedHandler = () => this.props.onSubmit({
-            model: this.state.model,
-            company: this.state.company,
-            year: this.state.year,
-            autonomy: this.state.autonomy,
-            batteryLeft: this.state.batteryLeft,
-            lastTechRevision: this.state.lastTechRevision
-        })
-    
+        model: this.state.model,
+        company: this.state.company,
+        year: this.state.year,
+        autonomy: this.state.autonomy,
+        batteryLeft: this.state.batteryLeft,
+        lastTechRevision: this.state.lastTechRevision
+    }).then(() => this.setState({
+        model: '',
+        company: '',
+        year: '',
+        autonomy: '',
+        batteryLeft: '',
+        lastTechRevision: ''
+    }))
+
 
     render() {
         return (
