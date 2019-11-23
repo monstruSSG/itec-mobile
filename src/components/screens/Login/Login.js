@@ -48,6 +48,7 @@ class Login extends Component {
     }
 
     navigateRegisterHandler = () => this.props.navigation.navigate('Register')
+    navigateAuthHandler = () => this.props.navigation.navigate('Auth')
 
     componentDidMount() {
         this.keyboardDidShowListener = Keyboard.addListener(
@@ -70,6 +71,7 @@ class Login extends Component {
     _keyboardDidHide = () => this.setState({ showKeyboard: false })
 
     onSubmitPressedHandler = () => this.props.login(this.state.email, this.state.password)
+        .then(this.navigateAuthHandler)
 
     render() {
         return (

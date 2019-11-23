@@ -39,8 +39,10 @@ class Register extends Component {
         password: ''
     }
 
+    navigateAuthScreen = () => this.props.navigation.navigate('Auth')
+
     onSubmitPressedHandler = () => this.props.register(this.state.email, this.state.firstName, this.state.lastName, this.state.password)
-        .then(console.log)
+        .then(this.navigateAuthScreen)
         .catch(console.log)
 
     render() {

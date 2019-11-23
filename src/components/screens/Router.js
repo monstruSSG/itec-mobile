@@ -65,7 +65,7 @@ const ApplicationStack = createSwitchNavigator({
     Unauth: UnauthStack,
     AuthLoading: AuthLoadingScreen
 }, {
-    initialRouteName: 'Unauth'
+    initialRouteName: 'AuthLoading'
 })
 
 export default createAppContainer(ApplicationStack)

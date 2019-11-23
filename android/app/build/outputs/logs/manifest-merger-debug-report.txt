@@ -6,6 +6,7 @@ INJECTED from /home/bogdi/Desktop/itec/ItecMobile/android/app/src/main/AndroidMa
 INJECTED from /home/bogdi/Desktop/itec/ItecMobile/android/app/src/main/AndroidManifest.xml:1:1-31:12
 MERGED from /home/bogdi/Desktop/itec/ItecMobile/android/app/src/main/AndroidManifest.xml:1:1-31:12
 MERGED from [:react-native-vector-icons] /home/bogdi/Desktop/itec/ItecMobile/node_modules/react-native-vector-icons/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:@react-native-community_async-storage] /home/bogdi/Desktop/itec/ItecMobile/node_modules/@react-native-community/async-storage/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-gesture-handler] /home/bogdi/Desktop/itec/ItecMobile/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-maps] /home/bogdi/Desktop/itec/ItecMobile/node_modules/react-native-maps/lib/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-12:12
 MERGED from [:react-native-reanimated] /home/bogdi/Desktop/itec/ItecMobile/node_modules/react-native-reanimated/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
@@ -175,6 +176,8 @@ INJECTED from /home/bogdi/Desktop/itec/ItecMobile/android/app/src/main/AndroidMa
 INJECTED from /home/bogdi/Desktop/itec/ItecMobile/android/app/src/main/AndroidManifest.xml
 MERGED from [:react-native-vector-icons] /home/bogdi/Desktop/itec/ItecMobile/node_modules/react-native-vector-icons/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-vector-icons] /home/bogdi/Desktop/itec/ItecMobile/node_modules/react-native-vector-icons/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:@react-native-community_async-storage] /home/bogdi/Desktop/itec/ItecMobile/node_modules/@react-native-community/async-storage/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:@react-native-community_async-storage] /home/bogdi/Desktop/itec/ItecMobile/node_modules/@react-native-community/async-storage/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-gesture-handler] /home/bogdi/Desktop/itec/ItecMobile/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-gesture-handler] /home/bogdi/Desktop/itec/ItecMobile/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-maps] /home/bogdi/Desktop/itec/ItecMobile/node_modules/react-native-maps/lib/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
