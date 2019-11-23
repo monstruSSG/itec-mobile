@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View, Text, StyleSheet } from 'react-native'
+import { View, StyleSheet, FlatList, TouchableOpacity } from 'react-native'
 import { connect } from 'react-redux'
 import { withNavigation } from 'react-navigation'
 
@@ -7,6 +7,7 @@ import CustomText from '../../common/Text/Text'
 import * as USER from '../../../store/actions/user'
 import { getToken } from '../../../utils/token'
 import Gravatar from '../../common/Gravatar/Gravatar'
+import Car from './Car/Car'
 
 import commonStyles from '../../../styles/common'
 import { BLACK_COLOR, GREY_COLOR, AVATAR_SIZE } from '../../../styles/stylesConstants'
@@ -18,10 +19,11 @@ const styles = StyleSheet.create({
         flexDirection: 'row'
     },
     cars: {
-        width: '100%',
+        width: '80%',
         height: '75%',
-        backgroundColor: 'green',
-        flexDirection: 'row'
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center'
     },
     icon: {
         width: '40%',
@@ -39,6 +41,14 @@ const styles = StyleSheet.create({
         width: AVATAR_SIZE,
         height: AVATAR_SIZE,
         borderRadius: AVATAR_SIZE / 2
+    },
+    addCar: {
+        width: '100%',
+        height: '20%',
+        justifyContent: 'center',
+        alignItems: 'center',
+        flexDirection: 'row',
+        backgroundColor: GREY_COLOR
     }
 })
 
@@ -74,6 +84,48 @@ class Profile extends Component {
                         </View>
                     </View>
                     <View style={[styles.cars]}>
+                        <TouchableOpacity style={[styles.addCar]}>
+                            <CustomText>Add a car</CustomText>
+                        </TouchableOpacity>
+                        <FlatList
+                            style={[commonStyles.max]}
+                            data={[
+                                {
+                                    key: 'Devin',
+                                    model: "string",
+                                    company: "string",
+                                    year: 0,
+                                    autonomy: 0,
+                                    batteryLeft: 0,
+                                    lastTechRevision: "2019-11-23T15:07:34.050Z",
+                                    userId: "string",
+                                    id: "string"
+                                },
+                                {
+                                    key: 'Devin',
+                                    model: "string",
+                                    company: "string",
+                                    year: 0,
+                                    autonomy: 0,
+                                    batteryLeft: 0,
+                                    lastTechRevision: "2019-11-23T15:07:34.050Z",
+                                    userId: "string",
+                                    id: "string"
+                                }, {
+                                    key: 'Devin',
+                                    model: "string",
+                                    company: "string",
+                                    year: 0,
+                                    autonomy: 0,
+                                    batteryLeft: 0,
+                                    lastTechRevision: "2019-11-23T15:07:34.050Z",
+                                    userId: "string",
+                                    id: "string"
+                                }
+
+                            ]}
+                            renderItem={({ item }) => <Car />}
+                        />
                     </View>
                 </>}
             </View>

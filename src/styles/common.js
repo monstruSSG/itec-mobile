@@ -10,6 +10,10 @@ export default StyleSheet.create({
     blackBackground: {
         backgroundColor: BLACK_COLOR
     },
+    carList: {
+        width: '100%',
+        height: '80%'
+    },
     centerX: {
         display: 'flex',
         alignItems: 'center'
