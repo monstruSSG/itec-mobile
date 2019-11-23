@@ -1,4 +1,3 @@
-import sha256 from 'sha256'
 import AsyncStorage from '@react-native-community/async-storage'
 
 import { SAVE_TOKEN, REMOVE_TOKEN } from './actionTypes'
