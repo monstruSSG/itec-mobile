@@ -6,6 +6,7 @@ import ForumScreen from './Forum/Forum'
 import MapScreen from './Map/Map'
 import ProfileScreen from './Profile/Profile'
 import AuthLoadingScreen from './AuthLoading/AuthLoading'
+import RegisterScreen from './Register/Register'
 
 import { BLACK_COLOR, WHITE_COLOR, LOGO_DIMENSION } from '../../styles/stylesConstants'
 import Icon from 'react-native-vector-icons/FontAwesome5'
@@ -50,7 +51,13 @@ const AuthStack = createBottomTabNavigator({
 const UnauthStack = createStackNavigator({
     Login: {
         screen: LoginScreen
+    },
+    Register: {
+        screen: RegisterScreen
     }
+}, {
+    initialRouteName: 'Login',
+    headerLayoutPreset: 'center'
 })
 
 const ApplicationStack = createSwitchNavigator({
