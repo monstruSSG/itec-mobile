@@ -1,9 +1,12 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { withNavigation } from 'react-navigation'
 import { View, StyleSheet, Keyboard, KeyboardAvoidingView } from 'react-native'
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 
 import Form from '../../../components/common/Form/Form'
 import Button from '../../../components/common/Button/Button'
+import * as USER from '../../../store/actions/user'
 
 import commonStyles from '../../../styles/common'
 import { WHITE_COLOR, WIDTH, BLACK_COLOR } from '../../../styles/stylesConstants'
@@ -66,9 +69,7 @@ class Login extends Component {
 
     _keyboardDidHide = () => this.setState({ showKeyboard: false })
 
-    onSubmitPressedHandler = () => {
-        alert(this.state.email)
-    }
+    onSubmitPressedHandler = () => this.props.login(this.state.email, this.state.password)
 
     render() {
         return (
@@ -79,8 +80,8 @@ class Login extends Component {
                 <View style={[styles.formContainer]}>
                     <Form
                         inputs={[
-                            { placeholder: 'EMAIL', type: 'text', value: this.state.email, onChangeText: text => this.setState({ email: text }) },
-                            { placeholder: 'PASSWORD', type: 'password', secureTextEntry: true, value: this.state.password, onChangeText: text => this.setState({ password: text }) }
+                            { placeholder: 'EMAIL', type: 'text', value: this.state.email, onChangeText: text => this.setState({ email: text }), autoCapitalize: 'none' },
+                            { placeholder: 'PASSWORD', type: 'password', secureTextEntry: true, value: this.state.password, onChangeText: text => this.setState({ password: text }), autoCapitalize: 'none' }
                         ]}
                         submitText='LOGIN'
                         onSubmit={this.onSubmitPressedHandler} />
@@ -93,4 +94,13 @@ class Login extends Component {
     }
 }
 
-export default Login
+const mapStateToProps = reducers => ({})
+
+const mapDispatchToProps = dispatch => ({
+    login: (email, password) => dispatch(USER.login(email, password))
+})
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(withNavigation(Login));
