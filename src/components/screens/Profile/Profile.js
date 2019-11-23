@@ -66,7 +66,8 @@ class Profile extends Component {
         email: '',
         render: false,
         showAddCarModal: false,
-        cars: []
+        cars: [],
+        updateCar: false
     }
 
     async componentDidMount() {
@@ -81,13 +82,16 @@ class Profile extends Component {
     }))
 
     getCars = () => this.props.getCars(this.token)
-        .then(cars => this.setState({ cars }, () => console.log(this.state.cars)))
+        .then(cars => this.setState({ cars }))
 
     onCarSubmitHandler = car => {
         this.setState({ showAddCarModal: false })
         this.props.createCar(this.token, car)
             .then(this.getCars)
     }
+
+    onDeleteCarHandler = id => this.props.deleteCar(this.token, id)
+        .then(this.getCars)
 
     render() {
         return (
@@ -119,7 +123,12 @@ class Profile extends Component {
                                     key: car.id,
                                     ...car
                                 }))}
-                                renderItem={({ item }) => <Car model={item.model} company={item.company} battery={item.batteryLeft}  />}
+                                renderItem={({ item }) => <Car
+                                    model={item.model}
+                                    company={item.company}
+                                    battery={item.batteryLeft}
+                                    onDelete={() => this.onDeleteCarHandler(item.key)}
+                                />}
                             />
                         </View>
                     </View>
@@ -134,7 +143,8 @@ const mapStateToProps = reducers => ({})
 const mapDispatchToProps = dispatch => ({
     getMe: token => dispatch(USER.getMe(token)),
     getCars: token => dispatch(CAR.getCars(token)),
-    createCar: (token, car) => dispatch(CAR.createCar(token, car))
+    createCar: (token, car) => dispatch(CAR.createCar(token, car)),
+    deleteCar: (token, id) => dispatch(CAR.deleteCar(token, id))
 })
 
 export default connect(

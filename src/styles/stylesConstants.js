@@ -6,6 +6,7 @@ export const LIGHT_GREY_COLOR = '#9ea0a5'
 export const ORANGE_COLOR = '#f6ab2f'
 export const GREEN_COLOR = '#34aa44'
 export const WHITE_COLOR = '#ffffff'
+export const RED_COLOR = '#d32f2f'
 
 export const WIDTH = Dimensions.get('window').width
 export const HEIGHT = Dimensions.get('window').height
