@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import { View, StyleSheet, Text, KeyboardAvoidingView } from 'react-native'
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
+import { View, KeyboardAvoidingView } from 'react-native'
 
 import Form from '../../../components/common/Form/Form'
 

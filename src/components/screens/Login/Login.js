@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View, StyleSheet, TouchableOpacity, KeyboardAvoidingView } from 'react-native'
+import { View, StyleSheet, Keyboard, KeyboardAvoidingView } from 'react-native'
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 
 import Form from '../../../components/common/Form/Form'
@@ -39,7 +39,37 @@ class Login extends Component {
         header: null
     }
 
+    state = {
+        showKeyboard: false,
+        email: '',
+        password: ''
+    }
+
     navigateRegisterHandler = () => this.props.navigation.navigate('Register')
+
+    componentDidMount() {
+        this.keyboardDidShowListener = Keyboard.addListener(
+            'keyboardDidShow',
+            this._keyboardDidShow,
+        );
+        this.keyboardDidHideListener = Keyboard.addListener(
+            'keyboardDidHide',
+            this._keyboardDidHide,
+        );
+    }
+
+    componentWillUnmount() {
+        this.keyboardDidShowListener.remove();
+        this.keyboardDidHideListener.remove();
+    }
+
+    _keyboardDidShow = () => this.setState({ showKeyboard: true })
+
+    _keyboardDidHide = () => this.setState({ showKeyboard: false })
+
+    onSubmitPressedHandler = () => {
+        alert(this.state.email)
+    }
 
     render() {
         return (
@@ -50,14 +80,15 @@ class Login extends Component {
                 <View style={[styles.formContainer]}>
                     <Form
                         inputs={[
-                            { placeholder: 'EMAIL', type: 'text' },
-                            { placeholder: 'PASSWORD', type: 'password' }
+                            { placeholder: 'EMAIL', type: 'text', value: this.state.email, onChangeText: text => this.setState({ email: text }) },
+                            { placeholder: 'PASSWORD', type: 'password', value: this.state.password, onChangeText: text => this.setState({ password: text }) }
                         ]}
-                        submitText='Login' />
+                        submitText='Login'
+                        onSubmit={this.onSubmitPressedHandler} />
                 </View>
-                <View style={[commonStyles.centerX, styles.register]}>
+                {!this.state.showKeyboard && <View style={[commonStyles.centerX, styles.register]}>
                     <Button onPress={this.navigateRegisterHandler} styles={styles.registerButton} color={WHITE_COLOR} normal text='Register' />
-                </View>
+                </View>}
             </KeyboardAvoidingView>
         )
     }

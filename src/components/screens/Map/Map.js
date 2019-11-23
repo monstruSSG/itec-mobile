@@ -10,6 +10,7 @@ class Map extends Component {
                     width: '100%',
                     height: '100%'
                 }}
+                provider={PROVIDER_GOOGLE}
                 initialRegion={{
                     latitude: 37.78825,
                     longitude: -122.4324,
