@@ -29,6 +29,9 @@ export const getMessages = (token, topicId) => dispatch => axios.get(`${TOPIC_PR
     .then(res => Promise.resolve(res.data))
     .catch(() => Promise.resolve([]))
 
+export const getMessage = (token, messageId) => dispatch => axios.get(`${MESSAGE_PREFIX}/${messageId}`, { headers: { 'Authorization': `Bearer ${token}` } })
+    .then(res => Promise.resolve(res.data))
+
 export const createCategory = (token, category) => dispatch => axios.post(`${CATEGORY_PREFIX}`, category, { headers: { 'Authorization': `Bearer ${token}` } })
     .then(res => Promise.resolve(res.data))
 

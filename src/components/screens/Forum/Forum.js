@@ -139,8 +139,11 @@ class Forum extends Component {
 
     onTopicDeleteHandler = id => this.props.deleteTopic(this.token, id)
         .then(() => this.onCategorieSelectHandler(this.state.parentId))
-    onMessageDeleteHandler = id => this.props.deleteMessage(this.token, id)
-        .then(message => this.onTopicSelectHandler(message.topicId))
+
+    onMessageDeleteHandler = id => this.props.getMessage(this.token, id)
+        .then(message => this.props.deleteMessage(this.token, id)
+            .then(() => this.onTopicSelectHandler(message.topicId)))
+
 
     onCreateCollection = () => {
 
@@ -318,7 +321,8 @@ const mapDispatchToProps = dispatch => ({
     createCategory: (token, category) => dispatch(FORUM.createCategory(token, category)),
     createChildCategory: (token, id, category) => dispatch(FORUM.createChildCategory(token, id, category)),
     createChildTopic: (token, id, topic) => dispatch(FORUM.createChildTopic(token, id, topic)),
-    createMessage: (token, id, message) => dispatch(FORUM.createMessage(token, id, message))
+    createMessage: (token, id, message) => dispatch(FORUM.createMessage(token, id, message)),
+    getMessage: (token, id) => dispatch(FORUM.getMessage(token, id))
 })
 
 export default connect(
