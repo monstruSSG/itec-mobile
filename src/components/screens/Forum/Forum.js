@@ -11,7 +11,7 @@ import Topic from './Topic/Topic'
 import * as FORUM from '../../../store/actions/forum'
 import { getToken } from '../../../utils/token'
 import commonStyles from '../../../styles/common'
-import { BLACK_COLOR } from '../../../styles/stylesConstants'
+import { BLACK_COLOR, GREY_COLOR, GREEN_COLOR } from '../../../styles/stylesConstants'
 
 const styles = StyleSheet.create({
     container: {
@@ -49,6 +49,15 @@ const styles = StyleSheet.create({
         right: 20,
         bottom: 20
     },
+    floatLeftCenter: {
+        justifyContent: 'center',
+        alignItems: 'center',
+        position: 'absolute',
+        width: 50,
+        height: 50,
+        left: 80,
+        bottom: 20
+    }
 })
 
 class Forum extends Component {
@@ -99,7 +108,7 @@ class Forum extends Component {
                     }, () => this.getCategories())
                 }
 
-                this.setState({ parentId: category.id, topicSelected: false }, () => {
+                this.setState({ parentId: category.parentId, topicSelected: false }, () => {
                     this.onCategorieSelectHandler(this.state.parentId)
                 })
             })
@@ -187,9 +196,18 @@ class Forum extends Component {
                         renderItem={({ item }) => <Category title={item.title} onPress={() => this.onCategorieSelectHandler(item.id)} />}
                     /> : this.state.topicSelected ? topicSelected : categorySelected}
                 </View>
-                <TouchableOpacity style={[styles.floatingButtonLeft]} onPress={this.goBackForumHandler}>
+                {this.state.parentId ? <TouchableOpacity style={[styles.floatingButtonLeft]} onPress={this.goBackForumHandler}>
                     <Icon name='arrow-circle-left' size={50} />
-                </TouchableOpacity>
+                </TouchableOpacity> : null}
+                {!this.state.topicSelected ? <TouchableOpacity style={[styles.floatLeftCenter]} onPress={this.goBackForumHandler}>
+                    <Icon name='plus-circle' color={GREY_COLOR} size={50} />
+                </TouchableOpacity> : null}
+                {this.state.parentId && !this.state.topicSelected ? <TouchableOpacity style={[styles.floatLeftCenter, { left: 140 }]} onPress={this.goBackForumHandler}>
+                    <Icon name='plus-circle' color={GREEN_COLOR} size={50} />
+                </TouchableOpacity> : null}
+                {this.state.topicSelected ? <TouchableOpacity style={[styles.floatLeftCenter, { left: 200 }]} onPress={this.goBackForumHandler}>
+                    <Icon name='plus-circle' color={BLACK_COLOR} size={50} />
+                </TouchableOpacity> : null}
             </View>
         )
     }

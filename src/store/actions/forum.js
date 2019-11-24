@@ -19,10 +19,14 @@ export const getCategorie = (token, id) => dispatch =>
     ]).then(results => Promise.resolve({
         subCategories: results[0].data,
         subTopics: results[1].data
+    })).catch(() => Promise.resolve({
+        subCategories: [],
+        subTopics: []
     }))
 
 export const getMessages = (token, topicId) => dispatch => axios.get(`${TOPIC_PREFIX}/${topicId}/GetMessages`, { headers: { 'Authorization': `Bearer ${token}` } })
     .then(res => Promise.resolve(res.data))
+    .catch(() => Promise.resolve([]))
 
 export const createCategory = (token, category) => dispatch => axios.post(`${CATEGORY_PREFIX}`, { ...category }, { headers: { 'Authorization': `Bearer ${token}` } })
     .then(res => Promise.resolve(res.data))
