@@ -9,6 +9,9 @@ export const getCategories = token => dispatch => axios.get(`${CATEGORY_PREFIX}`
 export const getCategorieData = (token, id) => dispatch => axios.get(`${CATEGORY_PREFIX}/${id}`, { headers: { 'Authorization': `Bearer ${token}` } })
     .then(res => Promise.resolve(res.data))
 
+export const getTopicData = (token, id) => dispatch => axios.get(`${TOPIC_PREFIX}/${id}`, { headers: { 'Authorization': `Bearer ${token}` } })
+    .then(res => Promise.resolve(res.data))
+
 export const getCategorie = (token, id) => dispatch =>
     Promise.all([
         axios.get(`${CATEGORY_PREFIX}/${id}/Categories`, { headers: { 'Authorization': `Bearer ${token}` } }),

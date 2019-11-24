@@ -87,7 +87,7 @@ class Forum extends Component {
     _goBackCategory = () => {
         return this.props.getCategorieData(this.token, this.state.parentId)
             .then(category => {
-                if(!category.parentId) {
+                if (!category.parentId) {
                     return this.setState({
                         categories: [],
                         messages: [],
@@ -105,9 +105,19 @@ class Forum extends Component {
             })
     }
 
+    _goBackTopic = () => {
+        return this.props.getTopicData(this.token, this.state.parentId)
+            .then(topic => {
+                this.setState({ parentId: topic.categoryId, topicSelected: false }, () => {
+                    this.onCategorieSelectHandler(this.state.parentId)
+                })
+            })
+    }
+
     goBackForumHandler = () => {
         if (!this.state.parentId || this.state.parentType == '') return
         if (this.state.parentType == 'CATEGORY') return this._goBackCategory()
+        if (this.state.parentType == 'TOPIC') return this._goBackTopic()
     }
 
     render() {
@@ -191,7 +201,8 @@ const mapDispatchToProps = dispatch => ({
     getCategories: token => dispatch(FORUM.getCategories(token)),
     getCategorie: (token, id) => dispatch(FORUM.getCategorie(token, id)),
     getMessages: (token, topicId) => dispatch(FORUM.getMessages(token, topicId)),
-    getCategorieData: (token, id) => dispatch(FORUM.getCategorieData(token, id))
+    getCategorieData: (token, id) => dispatch(FORUM.getCategorieData(token, id)),
+    getTopicData: (token, id) => dispatch(FORUM.getTopicData(token, id))
 })
 
 export default connect(
