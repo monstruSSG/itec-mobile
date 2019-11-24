@@ -129,6 +129,11 @@ class Forum extends Component {
         if (this.state.parentType == 'TOPIC') return this._goBackTopic()
     }
 
+    onTopicDeleteHandler = id => this.props.deleteTopic(this.token, id)
+        .then(() => this.onCategorieSelectHandler(this.state.parentId))
+    onMessageDeleteHandler = id => this.props.deleteMessage(this.token, id)
+        .then(message => this.onTopicSelectHandler(message.topicId))
+
     render() {
         const topicSelected = (
             <View style={styles.subList}>
@@ -142,7 +147,7 @@ class Forum extends Component {
                     }))}
                     renderItem={({ item }) => <Message
                         message={item.message}
-                        onPress={() => alert(item.id)} />}
+                        onDelete={() => this.onMessageDeleteHandler(item.id)} />}
                 />
             </View>
         )
@@ -175,6 +180,7 @@ class Forum extends Component {
                         renderItem={({ item }) => <Topic
                             title={item.title} content={item.content}
                             onPress={() => this.onTopicSelectHandler(item.id)}
+                            onDelete={() => this.onTopicDeleteHandler(item.id)}
                         />}
                     />
                 </View>
@@ -220,7 +226,9 @@ const mapDispatchToProps = dispatch => ({
     getCategorie: (token, id) => dispatch(FORUM.getCategorie(token, id)),
     getMessages: (token, topicId) => dispatch(FORUM.getMessages(token, topicId)),
     getCategorieData: (token, id) => dispatch(FORUM.getCategorieData(token, id)),
-    getTopicData: (token, id) => dispatch(FORUM.getTopicData(token, id))
+    getTopicData: (token, id) => dispatch(FORUM.getTopicData(token, id)),
+    deleteTopic: (token, id) => dispatch(FORUM.deleteTopic(token, id)),
+    deleteMessage: (token, id) => dispatch(FORUM.deleteMessage(token, id))
 })
 
 export default connect(

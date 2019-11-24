@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         flexDirection: 'row',
-        height: WIDTH / 8,
+        height: WIDTH / 6,
         marginTop: 5,
         marginBottom: 5,
         borderRadius: 20,
@@ -42,12 +42,7 @@ const styles = StyleSheet.create({
 export default props => (
     <TouchableOpacity style={styles.container} onPress={props.onPress}>
         <View style={styles.text}>
-            <CustomText color={WHITE_COLOR} large>{props.title} C</CustomText>
-        </View>
-        <View style={styles.iconWrapper}>
-            <TouchableOpacity style={styles.removeButton} onPress={props.onDelete}>
-                <Icon size={35} color={RED_COLOR} name='delete' />
-            </TouchableOpacity>
+            <CustomText color={WHITE_COLOR} large>{props.title}</CustomText>
         </View>
     </TouchableOpacity>
 )

@@ -2,6 +2,7 @@ import axios from '../../utils/axios'
 
 const CATEGORY_PREFIX = '/Forum/Category'
 const TOPIC_PREFIX = '/Forum/Topics'
+const MESSAGE_PREFIX = '/Forum/Messages'
 
 export const getCategories = token => dispatch => axios.get(`${CATEGORY_PREFIX}`, { headers: { 'Authorization': `Bearer ${token}` } })
     .then(res => Promise.resolve(res.data))
@@ -31,3 +32,10 @@ export const getMessages = (token, topicId) => dispatch => axios.get(`${TOPIC_PR
 export const createCategory = (token, category) => dispatch => axios.post(`${CATEGORY_PREFIX}`, { ...category }, { headers: { 'Authorization': `Bearer ${token}` } })
     .then(res => Promise.resolve(res.data))
 
+export const deleteMessage = (token, id) => dispatch => axios.delete(`${MESSAGE_PREFIX}/${id}`, { headers: { 'Authorization': `Bearer ${token}` } })
+    .then(res => Promise.resolve(res.data))
+    .catch(console.log)
+
+export const deleteTopic = (token, id) => dispatch => axios.delete(`${TOPIC_PREFIX}/${id}`, { headers: { 'Authorization': `Bearer ${token}` } })
+    .then(res => Promise.resolve(res.data))
+    .catch(console.log)

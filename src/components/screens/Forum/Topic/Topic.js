@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         flexDirection: 'row',
-        height: WIDTH / 8,
+        height: WIDTH / 6,
         marginTop: 5,
         marginBottom: 5,
         borderRadius: 20,
@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
 export default props => (
     <TouchableOpacity style={styles.container} onPress={props.onPress}>
         <View style={styles.text}>
-            <CustomText color={WHITE_COLOR} small>{props.title} T</CustomText>
+            <CustomText color={WHITE_COLOR} small>{props.title}</CustomText>
             <CustomText color={WHITE_COLOR} small>{props.content}</CustomText>
         </View>
         <View style={styles.iconWrapper}>
