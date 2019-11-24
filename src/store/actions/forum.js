@@ -29,13 +29,20 @@ export const getMessages = (token, topicId) => dispatch => axios.get(`${TOPIC_PR
     .then(res => Promise.resolve(res.data))
     .catch(() => Promise.resolve([]))
 
-export const createCategory = (token, category) => dispatch => axios.post(`${CATEGORY_PREFIX}`, { ...category }, { headers: { 'Authorization': `Bearer ${token}` } })
+export const createCategory = (token, category) => dispatch => axios.post(`${CATEGORY_PREFIX}`, category, { headers: { 'Authorization': `Bearer ${token}` } })
     .then(res => Promise.resolve(res.data))
+
+export const createChildCategory = (token, id, category) => dispatch => axios.post(`${CATEGORY_PREFIX}/${id}/Category`, category, { headers: { 'Authorization': `Bearer ${token}` } })
+    .then(res => Promise.resolve(res.data))
+
+export const createChildTopic = (token, id, topic) => dispatch => axios.post(`${CATEGORY_PREFIX}/${id}/Topic`, topic, { headers: { 'Authorization': `Bearer ${token}` } })
+    .then(res => Promise.resolve(res.data))
+
+export const createMessage = (token, id, message) => dispatch => axios.post(`${TOPIC_PREFIX}/${id}/AddMessage`, message, { headers: { 'Authorization': `Bearer ${token}` } })
+    .catch(console.log)
 
 export const deleteMessage = (token, id) => dispatch => axios.delete(`${MESSAGE_PREFIX}/${id}`, { headers: { 'Authorization': `Bearer ${token}` } })
     .then(res => Promise.resolve(res.data))
-    .catch(console.log)
 
 export const deleteTopic = (token, id) => dispatch => axios.delete(`${TOPIC_PREFIX}/${id}`, { headers: { 'Authorization': `Bearer ${token}` } })
     .then(res => Promise.resolve(res.data))
-    .catch(console.log)

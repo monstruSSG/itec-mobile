@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import { withNavigation } from 'react-navigation'
 import Icon from 'react-native-vector-icons/FontAwesome'
 
+
 import CustomText from '../../common/Text/Text'
 import Category from './Category/Category'
 import Message from './Message/Message'
@@ -12,6 +13,7 @@ import * as FORUM from '../../../store/actions/forum'
 import { getToken } from '../../../utils/token'
 import commonStyles from '../../../styles/common'
 import { BLACK_COLOR, GREY_COLOR, GREEN_COLOR } from '../../../styles/stylesConstants'
+import AddModal from './AddModal/AddModal'
 
 const styles = StyleSheet.create({
     container: {
@@ -21,7 +23,7 @@ const styles = StyleSheet.create({
     },
     list: {
         width: '90%',
-        height: '100%',
+        height: '80%',
         justifyContent: 'center',
         alignItems: 'center'
     },
@@ -68,7 +70,13 @@ class Forum extends Component {
         categorySelected: false,
         topicSelected: false,
         parentId: '',
-        parentType: ''
+        parentType: '',
+        showCollectionModal: false,
+        showTopicModal: false,
+        showMessageModal: false,
+        title: '',
+        content: '',
+        message: ''
     }
 
     async componentDidMount() {
@@ -133,6 +141,45 @@ class Forum extends Component {
         .then(() => this.onCategorieSelectHandler(this.state.parentId))
     onMessageDeleteHandler = id => this.props.deleteMessage(this.token, id)
         .then(message => this.onTopicSelectHandler(message.topicId))
+
+    onCreateCollection = () => {
+
+        if (this.state.parentId) return this.props.createChildCategory(this.token, this.state.parentId, {
+            title: this.state.title
+        }).then(() => {
+            this.setState({ showCollectionModal: false, title: '' })
+            if (this.state.parentId) {
+                return this.onCategorieSelectHandler(this.state.parentId)
+            }
+            return this.getCategories()
+        }).catch(() => this.setState({ showCollectionModal: false, title: '' }))
+
+        return this.props.createCategory(this.token, {
+            title: this.state.title
+        }).then(() => {
+            this.setState({ showCollectionModal: false, title: '' })
+            if (this.state.parentId) {
+                return this.onCategorieSelectHandler(this.state.parentId)
+            }
+            return this.getCategories()
+        }).catch(() => this.setState({ showCollectionModal: false, title: '' }))
+    }
+
+    onCreateTopic = () => this.props.createChildTopic(this.token, this.state.parentId, {
+        title: this.state.title,
+        content: this.state.content
+    }).then(() => {
+        this.setState({ showTopicModal: false, title: '', content: '' })
+        return this.onCategorieSelectHandler(this.state.parentId)
+    })
+
+    onCreateMessage = () => this.props.createMessage(this.token, this.state.parentId, {
+        message: this.state.message
+    }).then(() => {
+        this.setState({ showMessageModal: false, message: '' })
+        return this.onTopicSelectHandler(this.state.parentId)
+    }).catch(console.log)
+
 
     render() {
         const topicSelected = (
@@ -205,15 +252,54 @@ class Forum extends Component {
                 {this.state.parentId ? <TouchableOpacity style={[styles.floatingButtonLeft]} onPress={this.goBackForumHandler}>
                     <Icon name='arrow-circle-left' size={50} />
                 </TouchableOpacity> : null}
-                {!this.state.topicSelected ? <TouchableOpacity style={[styles.floatLeftCenter]} onPress={this.goBackForumHandler}>
+                {!this.state.topicSelected ? <TouchableOpacity
+                    style={[styles.floatLeftCenter]}
+                    onPress={() => this.setState({ showCollectionModal: true })}>
                     <Icon name='plus-circle' color={GREY_COLOR} size={50} />
                 </TouchableOpacity> : null}
-                {this.state.parentId && !this.state.topicSelected ? <TouchableOpacity style={[styles.floatLeftCenter, { left: 140 }]} onPress={this.goBackForumHandler}>
+                {this.state.parentId && !this.state.topicSelected ? <TouchableOpacity
+                    style={[styles.floatLeftCenter, { left: 140 }]}
+                    onPress={() => this.setState({ showTopicModal: true })}>
                     <Icon name='plus-circle' color={GREEN_COLOR} size={50} />
                 </TouchableOpacity> : null}
-                {this.state.topicSelected ? <TouchableOpacity style={[styles.floatLeftCenter, { left: 200 }]} onPress={this.goBackForumHandler}>
+                {this.state.topicSelected ? <TouchableOpacity
+                    style={[styles.floatLeftCenter, { left: 200 }]}
+                    onPress={() => this.setState({ showMessageModal: true })}>
                     <Icon name='plus-circle' color={BLACK_COLOR} size={50} />
                 </TouchableOpacity> : null}
+
+                <AddModal
+                    visible={this.state.showCollectionModal}
+                    title='ADD CATEGORY'
+                    submitText='ADD'
+                    inputs={[
+                        { placeholder: 'TITLE', type: 'text', value: this.state.title, onChangeText: text => this.setState({ title: text }) }
+                    ]}
+                    onSubmit={this.onCreateCollection}
+                    onCancel={() => this.setState({ showCollectionModal: false, title: '' })}
+                />
+
+                <AddModal
+                    visible={this.state.showTopicModal}
+                    title='ADD TOPIC'
+                    submitText='ADD'
+                    inputs={[
+                        { placeholder: 'TITLE', type: 'text', value: this.state.title, onChangeText: text => this.setState({ title: text }) },
+                        { placeholder: 'CONTENT', type: 'text', value: this.state.content, onChangeText: text => this.setState({ content: text }) }
+                    ]}
+                    onSubmit={this.onCreateTopic}
+                    onCancel={() => this.setState({ showTopicModal: false, title: '', content: '' })}
+                />
+                <AddModal
+                    visible={this.state.showMessageModal}
+                    title='ADD MESSAGE'
+                    submitText='ADD'
+                    inputs={[
+                        { placeholder: 'MESSAGE', type: 'text', value: this.state.message, onChangeText: text => this.setState({ message: text }) }
+                    ]}
+                    onSubmit={this.onCreateMessage}
+                    onCancel={() => this.setState({ showMessageModal: false, message: '' })}
+                />
             </View>
         )
     }
@@ -228,7 +314,11 @@ const mapDispatchToProps = dispatch => ({
     getCategorieData: (token, id) => dispatch(FORUM.getCategorieData(token, id)),
     getTopicData: (token, id) => dispatch(FORUM.getTopicData(token, id)),
     deleteTopic: (token, id) => dispatch(FORUM.deleteTopic(token, id)),
-    deleteMessage: (token, id) => dispatch(FORUM.deleteMessage(token, id))
+    deleteMessage: (token, id) => dispatch(FORUM.deleteMessage(token, id)),
+    createCategory: (token, category) => dispatch(FORUM.createCategory(token, category)),
+    createChildCategory: (token, id, category) => dispatch(FORUM.createChildCategory(token, id, category)),
+    createChildTopic: (token, id, topic) => dispatch(FORUM.createChildTopic(token, id, topic)),
+    createMessage: (token, id, message) => dispatch(FORUM.createMessage(token, id, message))
 })
 
 export default connect(
