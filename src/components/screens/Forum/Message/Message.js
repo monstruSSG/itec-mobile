@@ -3,7 +3,7 @@ import { View, StyleSheet, TouchableOpacity } from 'react-native'
 
 import CustomText from '../../../common/Text/Text'
 
-import { WIDTH, WHITE_COLOR, GREEN_COLOR } from '../../../../styles/stylesConstants'
+import { WIDTH, WHITE_COLOR, BLACK_COLOR } from '../../../../styles/stylesConstants'
 
 const styles = StyleSheet.create({
     container: {
@@ -14,15 +14,14 @@ const styles = StyleSheet.create({
         marginTop: 5,
         marginBottom: 5,
         borderRadius: 20,
-        borderColor: GREEN_COLOR,
+        borderColor: BLACK_COLOR,
         borderWidth: 3,
-        backgroundColor: GREEN_COLOR
+        backgroundColor: BLACK_COLOR
     }
 })
 
 export default props => (
     <TouchableOpacity style={styles.container} onPress={props.onPress}>
-        <CustomText color={WHITE_COLOR} large>{props.title} T</CustomText>
-        <CustomText color={WHITE_COLOR} small>{props.contant}</CustomText>
+        <CustomText color={WHITE_COLOR} normal>{props.message} M</CustomText>
     </TouchableOpacity>
 )

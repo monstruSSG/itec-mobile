@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
-import { View, FlatList, StyleSheet } from 'react-native'
+import { View, FlatList, StyleSheet, TouchableOpacity } from 'react-native'
 import { connect } from 'react-redux'
 import { withNavigation } from 'react-navigation'
+import Icon from 'react-native-vector-icons/FontAwesome'
 
 import CustomText from '../../common/Text/Text'
 import Category from './Category/Category'
+import Message from './Message/Message'
 import Topic from './Topic/Topic'
 import * as FORUM from '../../../store/actions/forum'
 import { getToken } from '../../../utils/token'
@@ -19,7 +21,7 @@ const styles = StyleSheet.create({
     },
     list: {
         width: '90%',
-        height: '80%',
+        height: '100%',
         justifyContent: 'center',
         alignItems: 'center'
     },
@@ -28,15 +30,32 @@ const styles = StyleSheet.create({
         height: '40%',
         justifyContent: 'center',
         alignItems: 'center'
-    }
+    },
+    floatingButtonLeft: {
+        justifyContent: 'center',
+        alignItems: 'center',
+        position: 'absolute',
+        width: 50,
+        height: 50,
+        left: 20,
+        bottom: 20
+    },
+    floatingButtonRight: {
+        justifyContent: 'center',
+        alignItems: 'center',
+        position: 'absolute',
+        width: 50,
+        height: 50,
+        right: 20,
+        bottom: 20
+    },
 })
 
 class Forum extends Component {
     state = {
         categories: [],
         messages: [],
-        subCategories: [],
-        subTopics: [],
+        topics: [],
         categorySelected: false,
         topicSelected: false,
         parentId: '',
@@ -49,26 +68,62 @@ class Forum extends Component {
     }
 
     onTopicSelectHandler = id => this.props.getMessages(this.token, id)
-        .then(messages => this.setState({ messages, parentId: id, parentType: 'TOPIC' }))
+        .then(messages => this.setState({ messages, parentId: id, parentType: 'TOPIC', topicSelected: true }))
 
     getCategories = () => this.props.getCategories(this.token)
         .then(categories => this.setState({ categories }))
 
     onCategorieSelectHandler = id => this.props.getCategorie(this.token, id)
-        .then(({ subCategories, subTopics }) => this.setState({ subCategories, subTopics, categorySelected: true, parentId: id, parentType: 'CATEGORY' }, () => console.log(this.state.subTopics)))
+        .then(({ subCategories, subTopics }) => this.setState({
+            categories: subCategories,
+            topics: subTopics,
+            categorySelected: true,
+            topicSelected: false,
+            parentId: id,
+            parentType: 'CATEGORY'
+        }))
+
+
+    _goBackCategory = () => {
+        return this.props.getCategorieData(this.token, this.state.parentId)
+            .then(category => {
+                if(!category.parentId) {
+                    return this.setState({
+                        categories: [],
+                        messages: [],
+                        topics: [],
+                        categorySelected: false,
+                        topicSelected: false,
+                        parentId: '',
+                        parentType: ''
+                    }, () => this.getCategories())
+                }
+
+                this.setState({ parentId: category.id, topicSelected: false }, () => {
+                    this.onCategorieSelectHandler(this.state.parentId)
+                })
+            })
+    }
+
+    goBackForumHandler = () => {
+        if (!this.state.parentId || this.state.parentType == '') return
+        if (this.state.parentType == 'CATEGORY') return this._goBackCategory()
+    }
 
     render() {
         const topicSelected = (
             <View style={styles.subList}>
                 <FlatList
-                    ListHeaderComponent={() => <CustomText>CATEGORIES</CustomText>}
+                    ListHeaderComponent={() => <CustomText>MESSAGES</CustomText>}
                     ListHeaderComponentStyle={{ justifyContent: 'center', alignItems: 'center' }}
                     style={[commonStyles.max]}
-                    data={this.state.subCategories.map(category => ({
-                        key: category.id,
-                        ...category
+                    data={this.state.messages.map(message => ({
+                        key: message.id,
+                        ...message
                     }))}
-                    renderItem={({ item }) => <Category title={item.title} onPress={() => this.onCategorieSelectHandler(item.id)} />}
+                    renderItem={({ item }) => <Message
+                        message={item.message}
+                        onPress={() => alert(item.id)} />}
                 />
             </View>
         )
@@ -80,7 +135,7 @@ class Forum extends Component {
                         ListHeaderComponent={() => <CustomText>CATEGORIES</CustomText>}
                         ListHeaderComponentStyle={{ justifyContent: 'center', alignItems: 'center' }}
                         style={[commonStyles.max]}
-                        data={this.state.subCategories.map(category => ({
+                        data={this.state.categories.map(category => ({
                             key: category.id,
                             ...category
                         }))}
@@ -94,13 +149,13 @@ class Forum extends Component {
                         ListHeaderComponent={() => <CustomText>TOPICS</CustomText>}
                         ListHeaderComponentStyle={{ justifyContent: 'center', alignItems: 'center' }}
                         style={[commonStyles.max]}
-                        data={this.state.subTopics.map(topic => ({
+                        data={this.state.topics.map(topic => ({
                             key: topic.id,
                             ...topic
                         }))}
                         renderItem={({ item }) => <Topic
                             title={item.title} content={item.content}
-                            onPress={() => this.onCategorieSelectHandler(item.id)}
+                            onPress={() => this.onTopicSelectHandler(item.id)}
                         />}
                     />
                 </View>
@@ -122,6 +177,9 @@ class Forum extends Component {
                         renderItem={({ item }) => <Category title={item.title} onPress={() => this.onCategorieSelectHandler(item.id)} />}
                     /> : this.state.topicSelected ? topicSelected : categorySelected}
                 </View>
+                <TouchableOpacity style={[styles.floatingButtonLeft]} onPress={this.goBackForumHandler}>
+                    <Icon name='arrow-circle-left' size={50} />
+                </TouchableOpacity>
             </View>
         )
     }
@@ -132,7 +190,8 @@ const mapStateToProps = reducers => ({})
 const mapDispatchToProps = dispatch => ({
     getCategories: token => dispatch(FORUM.getCategories(token)),
     getCategorie: (token, id) => dispatch(FORUM.getCategorie(token, id)),
-    getMessages: (token, topicId) => dispatch(FORUM.getMessages(token, topicId))
+    getMessages: (token, topicId) => dispatch(FORUM.getMessages(token, topicId)),
+    getCategorieData: (token, id) => dispatch(FORUM.getCategorieData(token, id))
 })
 
 export default connect(
